@@ -36,7 +36,7 @@ namespace FEEDBACK
                     url: "{controller}/{action}/{id}",
                     defaults: new { controller = "Danhmuc_KS", action = "Index", id = UrlParameter.Optional }
                 );
-
+            /*/
 
 
 
