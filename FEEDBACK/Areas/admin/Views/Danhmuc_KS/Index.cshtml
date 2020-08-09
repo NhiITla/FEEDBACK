@@ -1,0 +1,60 @@
+﻿@model IEnumerable<FEEDBACK.Models.Danhmuc_KS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh mục Khách sạn</h2>
+<br />
+<p>
+    @Html.ActionLink("Thêm Khách sạn", "Create")
+</p>
+<br />
+<table class="table">
+    <tr>
+        <th>STT</th>
+        <th>Tên cơ sở</th>
+        <th>Số phòng</th>
+        <th>Số giường</th>
+        <th>Địa chỉ</th>
+        <th>Điện thoại</th>
+        <th>Email</th>
+        <th>Ghi chú</th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ma_KS)
+    <td>
+        @Html.DisplayFor(modelItem => item.ten_coso)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.so_phong)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.so_giuong)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.diachi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.dienthoai)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ghichu)
+    </td>
+    <td>
+        @Html.ActionLink("Sửa", "Edit","Danhmuc_KS") |
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+    </td>
+</tr>
+}
+
+</table>
