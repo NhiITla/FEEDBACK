@@ -11,7 +11,6 @@ namespace FEEDBACK.Areas.admin
                 return "admin";
             }
         }
-
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
@@ -20,18 +19,12 @@ namespace FEEDBACK.Areas.admin
                 new { action = "Index", id = UrlParameter.Optional }
             );
 
-
             context.MapRoute(
-                "admin_Danhsach_KS",
-                "admin /{ controller}/{ action}/{ id}",
-                new { Controller = "Admin", action = "Danhsach_KS", id = UrlParameter.Optional }
+                "Edit",
+                "admin/{controller}/{action}/{id}",
+                new { controller="Danhmuc_KS" ,action = "Index", id = UrlParameter.Optional }
             );
 
-            context.MapRoute(
-               "admin_DanhmucKS_Edit",
-               "admin /{ controller}/{ action}/{ id}",
-               new { Controller = "Danhmuc_KS", action = "Edit", id = UrlParameter.Optional }
-           );
 
 
 

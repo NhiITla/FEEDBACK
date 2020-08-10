@@ -12,7 +12,7 @@ namespace FEEDBACK.Areas.admin.Controllers
 {
     public class Danhmuc_KSController : Controller
     {
-        private CSDL_FEEDBACK db = new CSDL_FEEDBACK();
+         CSDL_FEEDBACK db = new CSDL_FEEDBACK();
 
         // GET: admin/Danhmuc_KS
         public ActionResult Index()
@@ -27,7 +27,8 @@ namespace FEEDBACK.Areas.admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Danhmuc_KS danhmuc_KS = db.Danhmuc_KS.Find(id);
+            //Danhmuc_KS danhmuc_KS = db.Danhmuc_KS.Find(id);
+            Danhmuc_KS danhmuc_KS = db.Danhmuc_KS.SingleOrDefault(m => m.ma_KS == id);
             if (danhmuc_KS == null)
             {
                 return HttpNotFound();
@@ -64,8 +65,14 @@ namespace FEEDBACK.Areas.admin.Controllers
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+               
+
             }
-            Danhmuc_KS danhmuc_KS = db.Danhmuc_KS.Find(id);
+            //Danhmuc_KS danhmuc_KS = db.Danhmuc_KS.Find(id);
+            Danhmuc_KS danhmuc_KS = db.Danhmuc_KS.SingleOrDefault(m => m.ma_KS == id);
+
+            
+
             if (danhmuc_KS == null)
             {
                 return HttpNotFound();
@@ -96,7 +103,8 @@ namespace FEEDBACK.Areas.admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Danhmuc_KS danhmuc_KS = db.Danhmuc_KS.Find(id);
+           // Danhmuc_KS danhmuc_KS = db.Danhmuc_KS.Find(id);
+            Danhmuc_KS danhmuc_KS = db.Danhmuc_KS.SingleOrDefault(m => m.ma_KS == id);
             if (danhmuc_KS == null)
             {
                 return HttpNotFound();

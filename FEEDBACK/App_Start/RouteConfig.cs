@@ -33,10 +33,10 @@ namespace FEEDBACK
 
             routes.MapRoute(
                     name: "Sua-KS",
-                    url: "{controller}/{action}/{id}",
+                    url: "admin/{controller}/{action}/{id}",
                     defaults: new { controller = "Danhmuc_KS", action = "Index", id = UrlParameter.Optional }
                 );
-            /*/
+           
 
 
 

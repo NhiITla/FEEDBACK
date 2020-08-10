@@ -4,23 +4,34 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Danh mục Khách sạn</h2>
-<br />
+<h2>Index</h2>
+
 <p>
-    @Html.ActionLink("Thêm Khách sạn", "Create")
+    @Html.ActionLink("Create New", "Create")
 </p>
-<br />
 <table class="table">
     <tr>
-        <th>STT</th>
-        <th>Tên cơ sở</th>
-        <th>Số phòng</th>
-        <th>Số giường</th>
-        <th>Địa chỉ</th>
-        <th>Điện thoại</th>
-        <th>Email</th>
-        <th>Ghi chú</th>
-        
+        <th>
+            @Html.DisplayNameFor(model => model.ten_coso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.so_phong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.so_giuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diachi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dienthoai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ghichu)
+        </th>
         <th></th>
     </tr>
 
@@ -28,6 +39,7 @@
 <tr>
     <td>
         @Html.DisplayFor(modelItem => item.ma_KS)
+    </td>
     <td>
         @Html.DisplayFor(modelItem => item.ten_coso)
     </td>
@@ -50,9 +62,9 @@
         @Html.DisplayFor(modelItem => item.ghichu)
     </td>
     <td>
-        @Html.ActionLink("Sửa", "Edit","Danhmuc_KS") |
-        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        @Html.ActionLink("Edit", "Edit", new { id =item.ma_KS }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ma_KS }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */id = item.ma_KS })
     </td>
 </tr>
 }
