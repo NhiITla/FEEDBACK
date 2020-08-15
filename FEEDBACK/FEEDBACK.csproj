@@ -132,6 +132,7 @@
     <Compile Include="Areas\admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\admin\Controllers\AuthorController.cs" />
     <Compile Include="Areas\admin\Controllers\Danhmuc_KSController.cs" />
+    <Compile Include="Areas\admin\Controllers\Timkiem_KSController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\loginController.cs" />
     <Compile Include="Global.asax.cs">
@@ -164,6 +165,11 @@
     <Content Include="Areas\admin\Views\Danhmuc_KS\Details.cshtml" />
     <Content Include="Areas\admin\Views\Danhmuc_KS\Edit.cshtml" />
     <Content Include="Areas\admin\Views\Danhmuc_KS\Index.cshtml" />
+    <Content Include="Areas\admin\Views\Timkiem_KS\Create.cshtml" />
+    <Content Include="Areas\admin\Views\Timkiem_KS\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\Timkiem_KS\Details.cshtml" />
+    <Content Include="Areas\admin\Views\Timkiem_KS\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\Timkiem_KS\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

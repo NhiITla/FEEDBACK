@@ -3,70 +3,139 @@
 @{
     ViewBag.Title = "Index";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .checked {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
 
-<h2>Index</h2>
+    <h2 style="font-weight:bold; text-align:center">Quản lý Danh mục Khách sạn</h2>
+    <br />
+    @Html.ActionLink("Các loại khách sạn", "Index","Timkiem_KS")
+    <h4 style="color:blue; font-style:italic">Thống kê Khách sạn theo loại</h4>
+    <!-- Chọn KS theo sao-->
+    <br />
+    <table>
+        <tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ten_coso)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.so_phong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.so_giuong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.diachi)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dienthoai)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ghichu)
-        </th>
-        <th></th>
-    </tr>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.ma_KS)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.ten_coso)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.so_phong)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.so_giuong)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.diachi)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.dienthoai)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.email)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.ghichu)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id =item.ma_KS }) |
-        @Html.ActionLink("Details", "Details", new { id = item.ma_KS }) |
-        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */id = item.ma_KS })
-    </td>
-</tr>
-}
+            @Html.ActionLink(" >>  Loại 1", "Create")
+        </tr>
+        <br />
+        <tr>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            @Html.ActionLink(" >>   Loại 2", "Create")
+        </tr>
+        <br />
+        <tr>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            @Html.ActionLink(" >>  Loại 3", "Create")
+        </tr>
+        <br />
+        <tr>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star"></span>
+            @Html.ActionLink(" >>  Loại 4", "Create")
+        </tr>
+        <br />
+        <tr>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            @Html.ActionLink(" >>  Loại 5", "Create")
+        </tr>
+    </table>
 
-</table>
+
+    <hr />
+    <br />
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ten_coso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.so_phong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.so_giuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.diachi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dienthoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ghichu)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ma_KS)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ten_coso)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.so_phong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.so_giuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.diachi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dienthoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ghichu)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ma_KS }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ma_KS }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */id = item.ma_KS })
+                </td>
+            </tr>
+        }
+
+    </table>

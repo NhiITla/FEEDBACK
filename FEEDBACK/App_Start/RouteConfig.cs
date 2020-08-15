@@ -36,7 +36,13 @@ namespace FEEDBACK
                     url: "admin/{controller}/{action}/{id}",
                     defaults: new { controller = "Danhmuc_KS", action = "Index", id = UrlParameter.Optional }
                 );
-           
+
+            routes.MapRoute(
+                    name: "Tim-KS",
+                    url: "admin/{controller}/{action}/{id}",
+                    defaults: new { controller = "Timkiem_KS", action = "Index", id = UrlParameter.Optional }
+                );
+
 
 
 
